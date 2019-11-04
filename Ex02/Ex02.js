@@ -1,6 +1,6 @@
 /*
-	Function:Ex2
-	Author:Un-owen
+	Function:Ex02
+	Author:U.N-Owen
 	Build-Date:2019-10-16
 	Version：Alpha
  */

@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="296dd968-4502-4943-9505-1ddad6fc723f" name="Default Changelist" comment="" />
+    <list default="true" id="81213a20-d941-412f-800a-cb464f9c245d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectId" id="1SH7Ngy81JuqK3ZCbR1xwTAwOtk" />
+  <component name="ProjectId" id="1T2esyfkaREMGU7rl2zWM7gk1zr" />
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -41,12 +32,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="296dd968-4502-4943-9505-1ddad6fc723f" name="Default Changelist" comment="" />
-      <created>1571208629462</created>
+      <changelist id="81213a20-d941-412f-800a-cb464f9c245d" name="Default Changelist" comment="" />
+      <created>1572662827458</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1571208629462</updated>
-      <workItem from="1571208632447" duration="703000" />
+      <updated>1572662827458</updated>
+      <workItem from="1572662830389" duration="25000" />
     </task>
     <servers />
   </component>
