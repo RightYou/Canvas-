@@ -1,13 +1,14 @@
 /*
-    Function:Ex01
-    Author:U.N-Owen
-    BuildData:2019-10-16
-    Version:Alpha
+    Function:  Ex01-开学第一课
+    Author:    WuJoel
+    BuildDate: 2019-10-16
+    Version:   Alpha
  */
+
 //获取Canvas标记对象
-var canvas = document.getElementById("MyCanvas");
+let canvas = document.getElementById("MyCanvas");
 //获取canvas的绘图环境对象context
-var ctx = canvas.getContext("2d");
+let ctx = canvas.getContext("2d");
 //修改canvas 上的字体大小
 ctx.font = "64px 宋体";
 //修改文本绘制点的水平方向

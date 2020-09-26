@@ -1,19 +1,19 @@
 /*
-    Function:Ex03
-    Author:U.N-Owen
-    BuildDate:2019-11-02
-    Version:Alpha
+    Function:  Ex03-绘图练习
+    Author:    WuJoel
+    BuildDate: 2019-11-02
+    Version:   Alpha
  */
 
-var canvas = document.getElementById("MyCanvas");
-var ctx = canvas.getContext("2d");
+let canvas = document.getElementById("MyCanvas");
+let ctx = canvas.getContext("2d");
 
 //主要有两个部分，首先是欢迎光临的文本绘制，然后是直线和圆弧的绘制
 
 //将一些后面会重复用到的量保存
-var point = {x: canvas.width / 2, y: canvas.height / 2};
+let point = {x: canvas.width / 2, y: canvas.height / 2};
 
-var style = {
+let style = {
     fontSize: 60,
     hAlign: "center",
     vAlign: "middle",
@@ -23,9 +23,9 @@ var style = {
     lineWidth: "1"
 };
 
-var strWelcom = "欢迎光临";
+let strWelcome = "欢迎光临";
 //index用来后面索引单个字符绘制
-var index = 0;
+let index = 0;
 
 //绘制文本
 function drawText(text, style, bIsFill, point) {
@@ -53,13 +53,13 @@ function drawText(text, style, bIsFill, point) {
 function onInterval() {
     //清屏
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    if (index < strWelcom.length)
-    //绘制单个文字，charAt为字符串取字符方法
-        drawText(strWelcom.charAt(index), style, true, point);
+    if (index < strWelcome.length)
+        //绘制单个文字，charAt为字符串取字符方法
+        drawText(strWelcome.charAt(index), style, true, point);
     else
-        drawText(strWelcom, style, true, point);
+        drawText(strWelcome, style, true, point);
     index++;
-    if (index <= strWelcom.length)
+    if (index <= strWelcome.length)
         setTimeout(onInterval, 500);
     else {
         drawLine(line, style);//绘制细线
@@ -68,16 +68,16 @@ function onInterval() {
 }
 
 //绘制欢迎光临
-drawText(strWelcom, style, true, point);
+drawText(strWelcome, style, true, point);
 //线条和圆弧的绘制
-var line = {
+let line = {
     x0: 0,
     y0: 0,
     x1: canvas.width,
     y1: canvas.height
 };
 
-var arc = {
+let arc = {
     x: 0,
     y: 0,
     r: 200,
@@ -86,7 +86,7 @@ var arc = {
 };
 
 //设置粗线和文本的间隔常量值，常量用大写
-var MARGIN = 20;
+let MARGIN = 20;
 
 //绘制线条
 function drawLine(line, style) {
@@ -119,7 +119,7 @@ function drawArc(arc, style) {
 }
 
 //获取字符串的宽度，必须在字体设置之后（font属性赋值后）
-var nWidth = ctx.measureText(strWelcom).width;
+let nWidth = ctx.measureText(strWelcome).width;
 
 //设置粗线起始点坐标
 line.x0 = canvas.width / 2 - nWidth / 2;

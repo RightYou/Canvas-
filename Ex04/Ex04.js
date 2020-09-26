@@ -1,16 +1,16 @@
 /*
-    Function:Ex04
-    Author:U.N-Owen
-    BuildDate:2019-11-02
-    Version:Alpha
+    Function:  Ex04-米奇时钟绘图练习
+    Author:    WuJoel
+    BuildDate: 2019-11-02
+    Version:   Alpha
  */
 
-var canvas = document.getElementById("MyCanvas");
-var ctx = canvas.getContext("2d");
+let canvas = document.getElementById("MyCanvas");
+let ctx = canvas.getContext("2d");
 
 //新建图像对象
-var image = new Image();
-var circle = {
+let image = new Image();
+let circle = {
     x: canvas.width / 2,
     y: canvas.height / 2,
     r: canvas.width / 4,
@@ -43,7 +43,7 @@ function drawArc(circle) {
     ctx.arc(circle.x, circle.y, circle.r, circle.sAngle, circle.eAngle, circle.clockwise);
     //注意，此时的点在圆弧上，下一步就让它回到圆心了
     ctx.lineTo(canvas.width / 2, canvas.height / 2);
-    ctx.lineWidth = "2";
+    ctx.lineWidth = 2;
     ctx.stroke();
     //填充样式
     ctx.fillStyle = ctx.createPattern(image, "repeat");
@@ -68,21 +68,21 @@ function drawWord() {
 
 //================================================================
 //为画时钟准备
-var Numerals = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];//创建时间数组
+let Numerals = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];//创建时间数组
 //设置边距常量
-var Margins = 20;
-var HourMargins = 100;
-var MinuteMargins = 60;
+let Margins = 20;
+let HourMargins = 100;
+let MinuteMargins = 60;
 
 //设置样式、线对象，圆的样式使用前面的
-var style = {
+let style = {
     color: "blue",
     fontSize: 20,
     isFill: false,   //填充还是描边
     isFillImage: false,  //是否为填充图案
     lineWidth: 1
 };
-var line = {x0: canvas.width / 2, y0: canvas.height / 2, x1: 0, y1: 0, margins: MinuteMargins};
+let line = {x0: canvas.width / 2, y0: canvas.height / 2, x1: 0, y1: 0, margins: MinuteMargins};
 
 //画圆
 function drawCircle(circle, style) {
@@ -111,7 +111,7 @@ function drawCircle(circle, style) {
 
 //绘制数字
 function drawNumerals(circle, style) {
-    var num, angle;
+    let num, angle;
     ctx.save();
     ctx.font = style.fontSize + "px Arial";
     ctx.fillStyle = style.color;
@@ -155,11 +155,11 @@ function drawHand(line, style, angle, circle) {
 
 //绘制时、分、秒针
 function drawHands() {
-    var today = new Date();
-    var hours = today.getHours();
-    var mins = today.getMinutes();
-    var sec = today.getSeconds();
-    var angle;
+    let today = new Date();
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+    let sec = today.getSeconds();
+    let angle;
 
     //绘制秒针
     style.lineWidth = 1;
@@ -170,14 +170,14 @@ function drawHands() {
     //绘制分针
     style.lineWidth = 2;
     line.margins = MinuteMargins;
-    angle = -Math.PI / 2 + mins * 2 * Math.PI / 60;
+    angle = -Math.PI / 2 + minutes * 2 * Math.PI / 60;
     drawHand(line, style, angle, circle);
 
     //绘制时钟
     style.lineWidth = 3;
     line.margins = MinuteMargins;
     hours = hours % 12;
-    angle = -Math.PI / 2 + hours * Math.PI / 6 + mins * 2 * Math.PI / 12 * 60;
+    angle = -Math.PI / 2 + hours * Math.PI / 6 + minutes * 2 * Math.PI / 12 * 60;
     drawHand(line, style, angle, circle);
 }
 
@@ -187,7 +187,7 @@ function drawClock() {
     // style.lineWidth=5;
 
     //渐变设置
-    gradient = ctx.createRadialGradient(circle.x, circle.y, canvas.width / 1200, circle.x, circle.y, circle.r);
+    let gradient = ctx.createRadialGradient(circle.x, circle.y, canvas.width / 1200, circle.x, circle.y, circle.r);
     gradient.addColorStop(0, "rgb(255,0,0)");
     gradient.addColorStop(0.2, "rgb(255,165,0)");
     gradient.addColorStop(0.4, "rgb(255,255,0)");
@@ -219,7 +219,7 @@ function drawClock() {
 }
 
 
-var but = document.getElementById("but");
+let but = document.getElementById("but");
 but.onclick = function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawClock();
