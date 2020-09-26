@@ -1,0 +1,15 @@
+body {
+    background: lightgray;
+}
+
+#myCanvas {
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    padding: 10px;
+    position: absolute;  /* 默认static，此时left、top等无效 */
+    left: 60px;
+    top: 40px;
+    border: 5px inset yellow;
+    margin: 20px 15px 20px 25px;
+}
