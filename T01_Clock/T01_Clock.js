@@ -17,6 +17,7 @@ let ry = canvas.height / 2;  // 圆心坐标及半径
 let timeText = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  // 创建时间数组
 let handStyle = {"seconds": "red", "minutes": "green", "hours": "blue"};
 let image = new Image();
+image.src = "back.jpg";
 let imageFill;
 let backStyle;
 let dialStyle;
@@ -152,6 +153,8 @@ function drawClockCenter(radius) {
 
 /*  事件响应  */
 image.addEventListener("load", () => {
+    imageFill = context.createPattern(image, 'no-repeat'); // 图片加载成功后才能赋值
+    backStyle = imageFill;
     setInterval(main, 100)  // 不一定设置为1秒刷新一次，可以小一点，避免误差
     btnListener();  // 确保图片成功加载
 });
@@ -200,9 +203,6 @@ function btnListener() {
 
 /*  初始化  */
 console.log("默认使用样式1");
-image.src = "back.jpg";
-imageFill = context.createPattern(image, 'no-repeat');
-backStyle = imageFill;
 let linearGradientDail = context.createLinearGradient(400, 0, 500, 100);
 linearGradientDail.addColorStop(1, '#eab2d5')
 linearGradientDail.addColorStop(0, 'white');
