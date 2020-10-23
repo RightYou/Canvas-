@@ -1,0 +1,13 @@
+body {
+    background: #eeeeee;
+}
+
+#myCanvas {
+    border: burlywood 2px solid;
+    background: white;
+    padding: 5px;
+}
+
+.btn {
+    margin-left: 15px !important;
+}
