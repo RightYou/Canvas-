@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L07_Video</title>
+    <style>
+        body {
+            background: #eeeeee;
+        }
+
+        #main {
+            margin: 0 auto;
+            width: 600px;
+            height: 400px;
+        }
+
+        #myCanvas {
+            position: absolute;
+            border: burlywood 2px solid;
+            background: white;
+            padding: 0;
+            z-index: 1;
+        }
+
+        #myVideo {
+            z-index: 2;
+            position: absolute;
+            margin: 80px 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <video id="myVideo" src="video.mp4" width="400" controls muted></video>
+        <canvas id="myCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="L07_Video.js"></script>
+</body>
+</html>
